@@ -1,0 +1,49 @@
+@use './partials/variables' as v;
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    @include v.set-background;
+    display: flex;
+
+}
+
+main {
+    @include v.set-border;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+.heading {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    font-family: "Kode Mono", monospace;
+    color: white;
+    padding: 5rem;
+    width: 40rem;
+}
+
+.para {
+    width: 50rem;
+    align-self: center;
+    padding: 5rem;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+
+// #7fa589
+
+// #AE7F91
+
+// #C6B19F
