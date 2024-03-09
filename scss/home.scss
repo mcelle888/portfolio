@@ -1,49 +1,91 @@
 @use './partials/variables' as v;
+@use './partials/mixins' as m;
 
-* {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
-
-body {
-    @include v.set-background;
+header {
+    @include m.default-heading;
     display: flex;
-
+    flex-direction: column;
+    justify-self: flex-end;
+    align-items: center;
+    gap: 1rem;
 }
 
-main {
-    @include v.set-border;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-.heading {
-    display: flex;
-    justify-content: flex-end;
-    align-self: center;
-    font-family: "Kode Mono", monospace;
-    color: white;
-    padding: 5rem;
-    width: 40rem;
-}
-
-.para {
-    width: 50rem;
-    align-self: center;
-    padding: 5rem;
-}
-
-.pic {
+  .welcome {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column
+    width: 90vw;
+    height: 20px;
+    margin: 1rem;
+  }
+  
+  .welcome-text {
+    color: white;
+    font-size: 2rem;
+    font-family: v.$main-font;
+  }
+  .welcome-text::after {
+    display: block;
+    content: "|˶˙ᵕ˙ )ﾉﾞ";
+    animation: change-text 1.5s;
+    animation-iteration-count: 3;
+  }
+
+
+#portrait-img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    padding: 0.5rem;   
+    border: 5px solid v.$main-green;
+    box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
+    filter: saturate(20%) hue-rotate(-400deg);
+    margin-top: 1rem;
+
 }
 
+.text-box {
+    background-color:rgb(175, 185, 200, .5) ;
+    height:50vh;
+    width: 70vw;
+    margin: 2em auto;
+    box-shadow:   -5px 0 0 0 rgb(255, 255, 255, 0.7),
+                    5px 0 0 0 rgb(255, 255, 255, 0.7),
+                    0 -5px 0 0 rgb(255, 255, 255, 0.7),
+                    0 5px 0 0 rgb(255, 255, 255, 0.7);
 
-// #7fa589
+}
 
-// #AE7F91
+.para {
+    margin: 2rem;
 
-// #C6B19F
+}
+
+// Plays gif once on page load
+.gif {
+    filter: contrast(0%) brightness(0%) 
+    invert(100%);
+    height: 200px;
+    width: 200px;
+    background-image: url(/assets/hello.gif);
+    background-attachment: fixed;
+    background-position: center;
+    animation: play-once 1.5s forwards;  
+}
+
+// Hover to replay gif infintely 
+.gif:hover {
+    animation: play-infinite 1.5s infinite steps(1); 
+}
+
+@keyframes change-text {
+    0% {
+      content: "|˶˙ᵕ˙ )ﾉ";
+    }
+    50% {
+      content: "|˶˙ᵕ˙ )ﾉﾞ";
+    }
+    100% {
+      content: "|˶˙ᵕ˙ )-";
+    }
+  }

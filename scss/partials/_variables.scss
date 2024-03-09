@@ -1,24 +1,18 @@
-@mixin set-background {
-    background-color:#8cb697;
-    background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-  }
-  
+// Colours
+$base-pink:rgb(230, 188, 177);
+$main-green: rgba(166, 202, 131);
+$main-green-transparant:rgba(166, 202, 131, 0.5);
+$main-blue: rgb(175, 185, 200); 
+$main-pink: rgb(244, 169, 168); 
+$main-purple: rgb(206, 151, 176);
+$main-cream: rgb(251, 198, 164);
 
-@mixin set-border {
-    border-width: 2em 1em 1em 2em;
-    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-    transform: rotate(2deg);
-    margin: 1.5rem;
-    width: 100%;
-    height: 100vh;
-    background: transparent;
-    border: solid white;
-    border-color: white;
-    float: left;
-}
+$main-font: "Kode Mono", monospace;
+
+
+
+// #7fa589
+
+// #AE7F91
+
+// #C6B19F 

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+header {
+  font-size: 1rem;
+  color: white;
+  font-family: "Kode Mono", monospace;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 20px;
+  margin: 1rem;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 2rem;
+  font-family: "Kode Mono", monospace;
+}
+
+.welcome-text::after {
+  display: block;
+  content: "|˶˙ᵕ˙ )ﾉﾞ";
+  animation: change-text 1.5s;
+  animation-iteration-count: 3;
+}
+
+#portrait-img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 5px solid rgb(166, 202, 131);
+  box-shadow: -2px 2px 0 0 rgba(255, 255, 255, 0.7);
+  filter: saturate(20%) hue-rotate(-400deg);
+  margin-top: 1rem;
+}
+
+.text-box {
+  background-color: rgba(175, 185, 200, 0.5);
+  height: 50vh;
+  width: 70vw;
+  margin: 2em auto;
+  box-shadow: -5px 0 0 0 rgba(255, 255, 255, 0.7), 5px 0 0 0 rgba(255, 255, 255, 0.7), 0 -5px 0 0 rgba(255, 255, 255, 0.7), 0 5px 0 0 rgba(255, 255, 255, 0.7);
+}
+
+.para {
+  margin: 2rem;
+}
+
+.gif {
+  filter: contrast(0%) brightness(0%) invert(100%);
+  height: 200px;
+  width: 200px;
+  background-image: url(/assets/hello.gif);
+  background-attachment: fixed;
+  background-position: center;
+  animation: play-once 1.5s forwards;
+}
+
+.gif:hover {
+  animation: play-infinite 1.5s infinite steps(1);
+}
+
+@keyframes change-text {
+  0% {
+    content: "|˶˙ᵕ˙ )ﾉ";
+  }
+  50% {
+    content: "|˶˙ᵕ˙ )ﾉﾞ";
+  }
+  100% {
+    content: "|˶˙ᵕ˙ )-";
+  }
+}
+.nav-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(166, 202, 131, 0.5);
+  border-bottom: 1px solid antiquewhite;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: inline;
+  font-family: "Kode Mono", monospace;
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(230, 188, 177);
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/*# sourceMappingURL=style.css.map */
