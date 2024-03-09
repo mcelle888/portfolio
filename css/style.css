@@ -1,5 +1,5 @@
 @charset "UTF-8";
-header {
+.header-title {
   font-size: 1rem;
   color: white;
   font-family: "Kode Mono", monospace;
@@ -15,9 +15,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90vw;
-  height: 20px;
-  margin: 1rem;
+  margin-top: -0.25rem;
 }
 
 .welcome-text {
@@ -28,9 +26,10 @@ header {
 
 .welcome-text::after {
   display: block;
-  content: "|˶˙ᵕ˙ )ﾉﾞ";
+  content: "ﾉﾞ";
   animation: change-text 1.5s;
   animation-iteration-count: 3;
+  margin-top: -0.5rem;
 }
 
 #portrait-img {
@@ -56,6 +55,11 @@ header {
   margin: 2rem;
 }
 
+.container {
+  display: flex;
+  height: 2.5rem;
+}
+
 .gif {
   filter: contrast(0%) brightness(0%) invert(100%);
   height: 200px;
@@ -72,32 +76,133 @@ header {
 
 @keyframes change-text {
   0% {
-    content: "|˶˙ᵕ˙ )ﾉ";
+    content: "ﾉ";
   }
   50% {
-    content: "|˶˙ᵕ˙ )ﾉﾞ";
+    content: "ﾉﾞ";
   }
   100% {
-    content: "|˶˙ᵕ˙ )-";
+    content: "-";
   }
 }
-.nav-section {
+header {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
-  padding: 1rem;
   background-color: rgba(166, 202, 131, 0.5);
   border-bottom: 1px solid antiquewhite;
 }
 
-.nav-item {
-  list-style-type: none;
-  display: inline;
-  font-family: "Kode Mono", monospace;
-  color: white;
-  padding: 0.5rem;
+header a {
   text-decoration: none;
-  font-size: 1rem;
+  font-family: "Kode Mono", monospace;
+}
+
+#menu-button {
+  position: absolute;
+  display: hidden;
+}
+
+header {
+  display: grid;
+  grid-template-areas: "title   title   hamburger" "nav     nav     nav";
+}
+
+#logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-icon {
+  grid-area: hamburger;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 2em 1.5em 2em 0;
+  position: relative;
+  user-select: none;
+  visibility: visible;
+}
+
+.navbar {
+  background: white;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+}
+
+.navbar:before {
+  top: 5px;
+}
+
+.navbar:after {
+  top: -5px;
+}
+
+.navbar:before,
+.navbar:after {
+  background: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+.menu {
+  grid-area: nav;
+  max-width: unset;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a {
+  padding: 0.75rem;
+  background-color: rgb(175, 185, 200);
+  width: 100%;
+  text-align: end;
+}
+
+.menu a:hover {
+  background-color: white;
+}
+
+.menu-button:checked ~ .menu {
+  max-height: 20em;
+}
+
+.menu-button:checked ~ .menu-icon .navbar {
+  background: transparent;
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before {
+  transform: rotate(-45deg);
+}
+
+.menu-button:checked ~ .menu-icon .navbar:after {
+  transform: rotate(45deg);
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before,
+.menu-button:checked ~ .menu-icon .navbar:after {
+  top: 0;
 }
 
 * {

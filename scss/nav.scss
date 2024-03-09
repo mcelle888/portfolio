@@ -1,20 +1,135 @@
-.nav-section {
+@use './partials/variables' as v;
+
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: v.$main-green-transparant;
+    border-bottom: 1px solid antiquewhite;
+}
+  
+header a {
+text-decoration: none;
+font-family: v.$main-font;
+}
+
+// Hides checkbox
+#menu-button {
+position: absolute;
+display: hidden;
+}
+
+
+// .menu {
+// display: flex;
+// justify-content: space-between;
+// align-items: center;
+// max-width: 250px;
+// margin-right: 2rem;
+// }
+
+header {
+    display: grid;
+    grid-template-areas:
+    "title   title   hamburger"
+    "nav     nav     nav";
+}
+
+
+#logo {
+    height: 4rem;
+    width: 4rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    padding: 1rem;
-    background-color: rgba(166, 202, 131, 0.5);
-    border-bottom: 1px solid antiquewhite;
-
-    
+    align-items: baseline;
+    padding: 2em 1.5em 2em 0;
+    position: relative;
+    user-select: none;
+    visibility: visible;
 }
- 
-.nav-item {
-    list-style-type: none;
-    display: inline; 
-    font-family: "Kode Mono", monospace;
-    color: white;
-    padding: 0.5rem;
-    text-decoration: none;
-    font-size: 1rem;
+
+.navbar {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+.navbar:before {
+    top: 5px;
+}
+
+.navbar:after {
+    top: -5px;
+}
+
+.navbar:before,
+.navbar:after {
+    background: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+
+.menu {
+    grid-area: nav;
+    max-width: unset;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    padding: 0.75rem;
+    background-color: v.$main-blue;
+    width: 100%;
+    text-align: end;
+}
+
+.menu a:hover {
+    background-color:white;
+}
+
+.menu-button:checked ~ .menu {
+    max-height: 20em;
+}
+
+.menu-button:checked ~ .menu-icon .navbar {
+    background: transparent;
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before {
+    transform: rotate(-45deg);
+}
+
+.menu-button:checked ~ .menu-icon .navbar:after {
+    transform: rotate(45deg);
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before,
+.menu-button:checked ~ .menu-icon .navbar:after {
+    top: 0;
 }

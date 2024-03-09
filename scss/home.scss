@@ -1,7 +1,7 @@
 @use './partials/variables' as v;
 @use './partials/mixins' as m;
 
-header {
+.header-title {
     @include m.default-heading;
     display: flex;
     flex-direction: column;
@@ -10,13 +10,12 @@ header {
     gap: 1rem;
 }
 
+
   .welcome {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90vw;
-    height: 20px;
-    margin: 1rem;
+    margin-top: -0.25rem;
   }
   
   .welcome-text {
@@ -26,9 +25,10 @@ header {
   }
   .welcome-text::after {
     display: block;
-    content: "|˶˙ᵕ˙ )ﾉﾞ";
+    content: "ﾉﾞ";
     animation: change-text 1.5s;
     animation-iteration-count: 3;
+    margin-top: -0.5rem;
   }
 
 
@@ -58,7 +58,11 @@ header {
 
 .para {
     margin: 2rem;
+}
 
+.container {
+  display: flex;
+  height: 2.5rem;
 }
 
 // Plays gif once on page load
@@ -80,12 +84,12 @@ header {
 
 @keyframes change-text {
     0% {
-      content: "|˶˙ᵕ˙ )ﾉ";
+      content: "ﾉ";
     }
     50% {
-      content: "|˶˙ᵕ˙ )ﾉﾞ";
+      content: "ﾉﾞ";
     }
     100% {
-      content: "|˶˙ᵕ˙ )-";
+      content: "-";
     }
   }
