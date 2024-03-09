@@ -108,8 +108,9 @@ header {
 }
 
 #logo {
-  height: 4rem;
-  width: 4rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-left: 0.75rem;
 }
 
 .menu a {
@@ -175,7 +176,7 @@ header {
 
 .menu a {
   padding: 0.75rem;
-  background-color: rgb(175, 185, 200);
+  background-color: #afb9c8;
   width: 100%;
   text-align: end;
 }
