@@ -13,6 +13,34 @@ text-decoration: none;
 font-family: v.$main-font;
 }
 
+#logo {
+    height: 6rem;
+    width: 6rem;
+    margin: -1rem 0rem -1rem 1rem;
+}
+
+.menu a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    margin: 1rem;
+    padding: 0 0.25rem 0 0.25rem;
+    border-radius: 10%;
+    @include queries.phone {
+        padding: 0.75rem;
+        background-color: v.$main-blue;
+        width: 100%;
+        text-align: end;   
+        display: block;
+        margin:0;
+    }
+}
+
+.menu-button {
+    display: none;
+}
+
 // Hides checkbox
 #menu-button {
     @include queries.phone {
@@ -25,14 +53,12 @@ font-family: v.$main-font;
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    gap: 2rem;
     align-self: center;
-    margin-right: 2rem;
+    height: 100%;
     @include queries.phone {
         align-items: center;
         max-width: 250px;
         justify-content: space-between;
-        gap: 0rem;
     }
 }
 
@@ -43,22 +69,6 @@ header {
         "title   title   hamburger"
         "nav     nav     nav";
     }
-}
-
-
-#logo {
-    height: 4.5rem;
-    width: 4.5rem;
-    margin-left: 0.75rem;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-button {
-    display: none;
 }
 
 .menu-icon {
@@ -125,17 +135,12 @@ header {
     }
 }
 
-.menu a {
-    @include queries.phone {
-        padding: 0.75rem;
-        background-color: v.$main-blue;
-        width: 100%;
-        text-align: end;   
-    }
+.nav-item:hover {
+    background-color: red;
 }
 
 .menu a:hover {
-    background-color:white;
+    background-color:rgb(255, 255, 255, 0.5);
 }
 
 .menu-button:checked ~ .menu {
