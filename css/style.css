@@ -27,7 +27,7 @@
 .welcome-text::after {
   display: block;
   content: "ﾉﾞ";
-  animation: change-text 1.5s;
+  animation: change-text 1.25s;
   animation-iteration-count: 3;
   margin-top: -0.5rem;
 }
@@ -58,6 +58,8 @@
 .container {
   display: flex;
   height: 2.5rem;
+  width: 8rem;
+  justify-self: center;
 }
 
 .gif {
@@ -100,6 +102,14 @@ header a {
 #menu-button {
   position: absolute;
   display: hidden;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 250px;
+  margin-right: 2rem;
 }
 
 header {

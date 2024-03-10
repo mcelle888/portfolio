@@ -1,0 +1,182 @@
+@use './partials/variables' as v;
+@use './partials/queries';
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: v.$main-green-transparant;
+    border-bottom: 1px solid antiquewhite;
+    @include queries.phone {
+        display: grid;
+        grid-template-areas:
+        "title   title   hamburger"
+        "nav     nav     nav";
+    }
+}
+  
+header a {
+text-decoration: none;
+font-family: v.$main-font;
+}
+
+// Hides checkbox
+#menu-button {
+    @include queries.phone {
+        position: absolute;
+        display: hidden;
+    }
+}
+
+
+.menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 250px;
+margin-right: 2rem;
+}
+
+
+
+#logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    margin-left: 0.75rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-button {
+    display: none;
+}
+
+.menu-icon {
+    @include queries.phone {
+        grid-area: hamburger;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding: 2em 1.5em 2em 0;
+        position: relative;
+        user-select: none;
+        visibility: visible;
+    }
+}
+
+.navbar {
+    @include queries.phone {
+        background: white;
+        display: block;
+        height: 2px;
+        width: 18px;
+        position: relative;
+    }
+}
+
+.navbar:before {
+    @include queries.phone {
+        top: 5px;
+    }
+}
+
+.navbar:after {
+    @include queries.phone {
+        top: -5px;
+    }
+}
+
+.navbar:before,
+.navbar:after {
+    @include queries.phone {
+        background: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease-out;
+    }
+}
+
+.menu {
+    @include queries.phone {
+        grid-area: nav;
+        max-width: unset;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.menu a {
+    @include queries.phone {
+        padding: 0.75rem;
+        background-color: v.$main-blue;
+        width: 100%;
+        text-align: end;
+    }
+}
+
+.menu a:hover {
+    background-color:white;
+}
+
+.menu-button:checked ~ .menu {
+    @include queries.phone {
+        max-height: 20em;
+    }
+}
+
+.menu-button:checked ~ .menu-icon .navbar {
+    @include queries.phone {
+        background: transparent;
+    }
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before {
+    @include queries.phone {
+        transform: rotate(-45deg);
+    }
+
+}
+
+.menu-button:checked ~ .menu-icon .navbar:after {
+    @include queries.phone {
+        transform: rotate(45deg);
+    }
+}
+
+.menu-button:checked ~ .menu-icon .navbar:before,
+.menu-button:checked ~ .menu-icon .navbar:after {
+    @include queries.phone {
+        top: 0;
+    }
+}
+
+
+
+// Desktop
+.menu-button, .menu-icon .menu-icon {
+    display: none;
+}
+
+.menu {
+    width: 100vw;
+    gap: 2rem;
+    margin-right: 7rem;
+}
+
+
+
+.nav-item {
+    width: 10rem;
+}

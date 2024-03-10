@@ -1,5 +1,5 @@
 @use './partials/variables' as v;
-
+@use './partials/queries';
 
 header {
     display: flex;
@@ -20,15 +20,17 @@ display: hidden;
 }
 
 
-// .menu {
-// display: flex;
-// justify-content: space-between;
-// align-items: center;
-// max-width: 250px;
-// margin-right: 2rem;
-// }
+.menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 250px;
+margin-right: 2rem;
+}
 
 header {
+
+    
     display: grid;
     grid-template-areas:
     "title   title   hamburger"
@@ -134,3 +136,25 @@ header {
 .menu-button:checked ~ .menu-icon .navbar:after {
     top: 0;
 }
+
+
+// .menu-button, .menu-icon .menu-icon {
+//     display: none;
+// }
+
+
+// .menu {
+//     width: 100vw;
+//     gap: 2rem;
+//     margin-right: rem;
+// }
+
+// header {
+//     justify-content: space-between;
+    
+// }
+
+// .nav-item {
+//     width: 10rem;
+
+// }
