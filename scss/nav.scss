@@ -15,26 +15,34 @@ font-family: v.$main-font;
 
 // Hides checkbox
 #menu-button {
-position: absolute;
-display: hidden;
+    @include queries.phone {
+        position: absolute;
+        display: hidden;
+    }
 }
 
-
 .menu {
-display: flex;
-justify-content: space-between;
-align-items: center;
-max-width: 250px;
-margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2rem;
+    align-self: center;
+    margin-right: 2rem;
+    @include queries.phone {
+        align-items: center;
+        max-width: 250px;
+        justify-content: space-between;
+        gap: 0rem;
+    }
 }
 
 header {
-
-    
-    display: grid;
-    grid-template-areas:
-    "title   title   hamburger"
-    "nav     nav     nav";
+    @include queries.phone{
+        display: grid;
+        grid-template-areas:
+        "title   title   hamburger"
+        "nav     nav     nav";
+    }
 }
 
 
@@ -54,62 +62,76 @@ header {
 }
 
 .menu-icon {
-    grid-area: hamburger;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
-    padding: 2em 1.5em 2em 0;
-    position: relative;
-    user-select: none;
-    visibility: visible;
+    @include queries.phone {
+        grid-area: hamburger;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding: 2em 1.5em 2em 0;
+        position: relative;
+        user-select: none;
+        visibility: visible;   
+    }
 }
 
 .navbar {
-    background: white;
-    display: block;
-    height: 2px;
-    width: 18px;
-    position: relative;
+    @include queries.phone {
+        background: white;
+        display: block;
+        height: 2px;
+        width: 18px;
+        position: relative;
+    }
 }
 
 .navbar:before {
-    top: 5px;
+    @include queries.phone {
+        top: 5px;
+    }
 }
 
 .navbar:after {
-    top: -5px;
+    @include queries.phone {
+        top: -5px;
+    }
 }
 
 .navbar:before,
 .navbar:after {
-    background: white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    transition: all 0.2s ease-out;
+    @include queries.phone {
+        background: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease-out;   
+    }
 }
 
 .menu {
-    grid-area: nav;
-    max-width: unset;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
+    @include queries.phone {
+        grid-area: nav;
+        max-width: unset;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .menu a {
-    padding: 0.75rem;
-    background-color: v.$main-blue;
-    width: 100%;
-    text-align: end;
+    @include queries.phone {
+        padding: 0.75rem;
+        background-color: v.$main-blue;
+        width: 100%;
+        text-align: end;   
+    }
 }
 
 .menu a:hover {
@@ -138,23 +160,3 @@ header {
 }
 
 
-// .menu-button, .menu-icon .menu-icon {
-//     display: none;
-// }
-
-
-// .menu {
-//     width: 100vw;
-//     gap: 2rem;
-//     margin-right: rem;
-// }
-
-// header {
-//     justify-content: space-between;
-    
-// }
-
-// .nav-item {
-//     width: 10rem;
-
-// }
