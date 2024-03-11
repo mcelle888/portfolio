@@ -1,0 +1,8 @@
+@use './partials/mixins' as m;
+@use './partials/variables' as v;
+
+#about {
+    height: 100vh;
+    @include m.set-background;
+    background-color: v.$main-cream;
+}

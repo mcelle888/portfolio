@@ -37,9 +37,9 @@
     height: 15rem;
     border-radius: 50%;
     padding: 0.5rem;   
-    border: 5px solid v.$main-green;
+    border: 5px solid rgb(128, 216, 212);
     box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
-    filter: saturate(20%) hue-rotate(-400deg);
+    filter: saturate(20%) hue-rotate(30deg);
     margin-top: 1rem;
 
 }
