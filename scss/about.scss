@@ -2,7 +2,8 @@
 @use './partials/variables' as v;
 
 #about {
+    width: 100vw;
     height: 100vh;
     @include m.set-background;
-    background-color: v.$main-cream;
+    background-color: rgb(243, 222, 183);
 }

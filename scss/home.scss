@@ -1,6 +1,15 @@
 @use './partials/variables' as v;
 @use './partials/mixins' as m;
 
+.home {
+  @include m.set-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+} 
+
 .header-title {
     @include m.default-heading;
     display: flex;
@@ -10,56 +19,57 @@
     gap: 1rem;
 }
 
+.subheading {
+  text-align: center;
+}
 
-  .welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -0.25rem;
-  }
-  
-  .welcome-text {
-    color: white;
-    font-size: 2rem;
-    font-family: v.$main-font;
-  }
-  .welcome-text::after {
-    display: block;
-    content: "ﾉﾞ";
-    animation: change-text 1.25s;
-    animation-iteration-count: 3;
-    margin-top: -0.5rem;
-  }
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.25rem;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 2rem;
+  font-family: v.$main-font;
+}
+
+.welcome-text::after {
+  display: block;
+  content: "ﾉﾞ";
+  animation: change-text 1.25s;
+  animation-iteration-count: 3;
+  margin-top: -0.5rem;
+}
 
 
 #portrait-img {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    padding: 0.5rem;   
-    border: 5px solid rgb(128, 216, 212);
-    box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
-    filter: saturate(20%) hue-rotate(30deg);
-    margin-top: 1rem;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  padding: 0.5rem;   
+  border: 5px solid rgb(128, 216, 212);
+  box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
+  filter: saturate(20%) hue-rotate(30deg);
+  margin-top: 1rem;
 
 }
 
 .text-box {
-    background-color:rgb(175, 185, 200, .5) ;
-    height:50vh;
-    width: 70vw;
-    margin: 2em auto;
-    box-shadow:   -5px 0 0 0 rgb(255, 255, 255, 0.7),
-                    5px 0 0 0 rgb(255, 255, 255, 0.7),
-                    0 -5px 0 0 rgb(255, 255, 255, 0.7),
-                    0 5px 0 0 rgb(255, 255, 255, 0.7);
+  background-color:rgb(175, 185, 200, .5) ;
+  height:50vh;
+  width: 70vw;
+  margin: 2em auto;
+  box-shadow:   -5px 0 0 0 rgb(255, 255, 255, 0.7),
+                  5px 0 0 0 rgb(255, 255, 255, 0.7),
+                  0 -5px 0 0 rgb(255, 255, 255, 0.7),
+                  0 5px 0 0 rgb(255, 255, 255, 0.7);
 
 }
 
-.para {
-    margin: 2rem;
-}
-
+ 
 .container {
   display: flex;
   height: 2.5rem;
