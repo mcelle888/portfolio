@@ -6,16 +6,23 @@ header {
     width: 100%;
     background-color: v.$main-green-transparant;
     border-bottom: 1px solid antiquewhite;
+    z-index: 1;
+    margin-bottom: 2rem; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
   
 header a {
 text-decoration: none;
 font-family: v.$main-font;
+
 }
 
 #logo {
     height: 6rem;
-    width: 6rem;
+    width: 5.5rem;
     margin: -1rem 0rem -1rem 1rem;
 }
 
@@ -29,11 +36,12 @@ font-family: v.$main-font;
     border-radius: 10%;
     @include queries.phone {
         padding: 0.75rem;
-        background-color: v.$main-blue;
+        background-color: v.$main-blue-transparent;
         width: 100%;
         text-align: end;   
         display: block;
         margin:0;
+        border-radius: 0;
     }
 }
 
@@ -135,12 +143,8 @@ header {
     }
 }
 
-.nav-item:hover {
-    background-color: red;
-}
-
 .menu a:hover {
-    background-color:rgb(255, 255, 255, 0.5);
+    background-color:rgb(255, 255, 255, 0.2);
 }
 
 .menu-button:checked ~ .menu {
