@@ -4,6 +4,31 @@
 #about {
     width: 100vw;
     height: 100vh;
-    @include m.set-background;
     background-color: rgb(243, 222, 183);
 }
+
+.heading-title {
+    @include m.default-heading;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    align-items: center;
+    gap: 1rem; 
+    font-size: 2rem;
+    padding: 2rem;
+    padding-top:5rem;
+    position: relative;
+}
+
+.text-box {
+    background-color:rgb(175, 185, 200, .5) ;
+    height:50vh;
+    width: 70vw;
+    margin: 2em auto;
+    padding: 2.5rem;
+    box-shadow:   -5px 0 0 0 rgb(255, 255, 255, 0.7),
+                    5px 0 0 0 rgb(255, 255, 255, 0.7),
+                    0 -5px 0 0 rgb(255, 255, 255, 0.7),
+                    0 5px 0 0 rgb(255, 255, 255, 0.7);
+  }
+  

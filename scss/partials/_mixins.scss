@@ -1,44 +1,9 @@
 @use './variables' as v;
 
-@mixin set-background {
-    background-color:rgb(230, 188, 177);
-    // background-image:
-    // radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    // radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    // radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-    // radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-    // background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    // background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-    // background-image: url(../../assets/home1.jpg);
-    // background-position: right bottom;
-  }
   
-  @mixin default-heading {
-    font-size: 1rem;
+@mixin default-heading {
+    font-size: 1.2rem;
     color: white;
     font-family: v.$main-font;
-    margin: 2rem;
   }
 
-// @mixin set-border {
-//     border-width: 2em 1em 1em 2em;
-//     border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-//     transform: rotate(2deg);
-//     margin: 1.5rem;
-//     width: 100vw;;
-//     height: 100vh;
-//     background: transparent;
-//     border: solid white;
-//     border-color: white;
-//     float: left;
-// }
-
-// @mixin set-border-two {
-//   border-width: 2em 1em 1em 2em;
-//   border-radius:25% 3% 64% 5%/20% 60% 2% 95%;
-//   margin: 1.5rem;
-//   background: transparent;
-//   border: solid white;
-//   border-color: white;
-//   float: left;
-// }
