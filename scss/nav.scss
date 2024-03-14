@@ -1,6 +1,7 @@
 @use './partials/variables' as v;
 @use './partials/queries';
 
+// Navbar container
 header {
     display: flex;
     background-color: v.$main-green-transparant;
@@ -11,25 +12,54 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
+    @include queries.phone{
+        display: grid;
+        grid-template-areas:
+        "title   title   hamburger"
+        "nav     nav     nav";
+    }
 }
-  
-header a {
-text-decoration: none;
-font-family: v.$main-font;
 
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-self: center;
+    height: 100%;
+    @include queries.phone {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 0;
+        grid-area: nav;
+        max-width: unset;
+        transition: max-height 0.2s ease-out;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255, 0.2);
+    }
 }
 
+// Logo Link
+.home-link {
+    @include queries.phone {
+        margin-left: -3rem;
+    }
+}
+
+// Logo image
 #logo {
     height: 6rem;
     width: 5.5rem;
     margin: -1rem 0rem -1rem 1rem;
 }
 
+// Nav menu items
 .menu a {
+    font-family: v.$main-font;
     display: flex;
+    align-items: center;
     text-decoration: none;
     color: white;
-    align-items: center;
     margin: 1rem;
     padding: 0 0.25rem 0 0.25rem;
     border-radius: 10%;
@@ -44,39 +74,12 @@ font-family: v.$main-font;
     }
 }
 
+// Hides button to open/close mobile navbar
 .menu-button {
     display: none;
 }
 
-// Hides checkbox
-#menu-button {
-    @include queries.phone {
-        position: absolute;
-        display: hidden;
-    }
-}
-
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    align-self: center;
-    height: 100%;
-    @include queries.phone {
-        align-items: center;
-        max-width: 250px;
-        justify-content: space-between;
-    }
-}
-
-header {
-    @include queries.phone{
-        display: grid;
-        grid-template-areas:
-        "title   title   hamburger"
-        "nav     nav     nav";
-    }
-}
+// Mobile hamburger navbar styling
 
 .menu-icon {
     @include queries.phone {
@@ -124,21 +127,6 @@ header {
         content: "";
         position: absolute;
         transition: all 0.2s ease-out;   
-    }
-}
-
-.menu {
-    @include queries.phone {
-        grid-area: nav;
-        max-width: unset;
-        max-height: 0;
-        transition: max-height 0.2s ease-out;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(255, 255, 255, 0.2);
-        display: flex;
-        flex-direction: column;
     }
 }
 
