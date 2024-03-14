@@ -1,9 +1,21 @@
 @use './variables' as v;
 
   
-@mixin default-heading {
+@mixin default-heading () {
     font-size: 1.2rem;
     color: white;
     font-family: v.$main-font;
   }
 
+@mixin center-column { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin round-border {
+  border-radius: 50%;
+  padding: 0.5rem;  
+}

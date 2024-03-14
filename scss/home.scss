@@ -1,43 +1,32 @@
 @use './partials/variables' as v;
 @use './partials/mixins' as m;
 
+// Home Section
 .home {
+  @include m.center-column;
   background-color: v.$base-pink;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100%;
   width: 100vw;
-  justify-content: center;
 } 
  
+// Header Text 
 .header-title {
+    @include m.center-column;
     @include m.default-heading;
-    display: flex;
-    flex-direction: column;
-    justify-self: flex-end;
-    align-items: center;
     gap: 1rem;
 }
 
-.subheading {
-  text-align: center;
-}
-
-.welcome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// Align animation on wave
+.wave-box {
   margin-top: -0.25rem;
 }
 
-.welcome-text {
-  color: white;
+.wave-text {
   font-size: 2rem;
-  font-family: v.$main-font;
 }
 
-.welcome-text::after {
+// Wave animation
+.wave-text::after {
   display: block;
   content: "ﾉﾞ";
   animation: change-text 1.25s;
@@ -45,12 +34,10 @@
   margin-top: -0.5rem;
 }
 
-
 #portrait-img {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-  padding: 0.5rem;   
+  @include m.round-border;
+  width: 14rem;
+  height: 14rem;  
   border: 5px solid rgb(128, 216, 212);
   box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
   filter: saturate(20%) hue-rotate(30deg);
@@ -58,15 +45,27 @@
 
 }
 
-
 .container {
   display: flex;
   height: 2.5rem;
   width: 8rem;
-  justify-self: center;
 }
 
-// Plays gif once on page load
+// Animation for wave-box
+@keyframes change-text {
+  0% {
+    content: "ﾉ";
+  }
+  50% {
+    content: "ﾉﾞ";
+  }
+  100% {
+    content: "-";
+  }
+}
+
+// MOVE TO CONTACT PAGE
+// Plays stickman gif once on page load
 .gif {
     filter: contrast(0%) brightness(0%) 
     invert(100%);
@@ -82,15 +81,3 @@
 .gif:hover {
     animation: play-infinite 1.5s infinite steps(1); 
 }
-
-@keyframes change-text {
-    0% {
-      content: "ﾉ";
-    }
-    50% {
-      content: "ﾉﾞ";
-    }
-    100% {
-      content: "-";
-    }
-  }

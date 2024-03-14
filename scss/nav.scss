@@ -3,15 +3,14 @@
 
 header {
     display: flex;
-    width: 100%;
     background-color: v.$main-green-transparant;
     border-bottom: 1px solid antiquewhite;
-    z-index: 1;
     margin-bottom: 2rem; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
   
 header a {

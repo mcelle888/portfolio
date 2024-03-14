@@ -1,43 +1,36 @@
 @charset "UTF-8";
 .home {
-  background-color: rgb(230, 188, 177);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(230, 188, 177);
   height: 100%;
   width: 100vw;
-  justify-content: center;
 }
 
 .header-title {
-  font-size: 1.2rem;
-  color: white;
-  font-family: "Kode Mono", monospace;
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
-  align-items: center;
-  gap: 1rem;
-}
-
-.subheading {
-  text-align: center;
-}
-
-.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Kode Mono", monospace;
+  gap: 1rem;
+}
+
+.wave-box {
   margin-top: -0.25rem;
 }
 
-.welcome-text {
-  color: white;
+.wave-text {
   font-size: 2rem;
-  font-family: "Kode Mono", monospace;
 }
 
-.welcome-text::after {
+.wave-text::after {
   display: block;
   content: "ﾉﾞ";
   animation: change-text 1.25s;
@@ -46,10 +39,10 @@
 }
 
 #portrait-img {
-  width: 12rem;
-  height: 12rem;
   border-radius: 50%;
   padding: 0.5rem;
+  width: 14rem;
+  height: 14rem;
   border: 5px solid rgb(128, 216, 212);
   box-shadow: -2px 2px 0 0 rgba(255, 255, 255, 0.7);
   filter: saturate(20%) hue-rotate(30deg);
@@ -60,9 +53,19 @@
   display: flex;
   height: 2.5rem;
   width: 8rem;
-  justify-self: center;
 }
 
+@keyframes change-text {
+  0% {
+    content: "ﾉ";
+  }
+  50% {
+    content: "ﾉﾞ";
+  }
+  100% {
+    content: "-";
+  }
+}
 .gif {
   filter: contrast(0%) brightness(0%) invert(100%);
   height: 200px;
@@ -77,28 +80,16 @@
   animation: play-infinite 1.5s infinite steps(1);
 }
 
-@keyframes change-text {
-  0% {
-    content: "ﾉ";
-  }
-  50% {
-    content: "ﾉﾞ";
-  }
-  100% {
-    content: "-";
-  }
-}
 header {
   display: flex;
-  width: 100%;
   background-color: rgba(166, 202, 131, 0.5);
   border-bottom: 1px solid antiquewhite;
-  z-index: 1;
   margin-bottom: 2rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 header a {
@@ -310,8 +301,8 @@ main {
   height: 100vh;
 }
 
-/* BACKGROUND ELEMENT */
-/* Copyright (c) 2024 by Riley Pearce (https://codepen.io/riley-pearce/pen/OJWPjZM) */
+/* BACKGROUND */
+/* Copyright 2024 by Riley Pearce (https://codepen.io/riley-pearce/pen/OJWPjZM) */
 .full-wh {
   position: absolute;
   top: 0px;
