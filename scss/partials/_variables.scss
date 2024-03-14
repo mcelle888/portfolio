@@ -7,9 +7,18 @@ $main-blue-transparent:rgb(175, 185, 200, 0.7) ;
 $main-pink: rgb(244, 169, 168); 
 $main-purple: rgb(206, 151, 176);
 $main-cream: rgb(251, 198, 164);
+$base-cream: rgb(243, 222, 183); 
 
+// Font
 $main-font: "Kode Mono", monospace;
 
+// Border styles
+$textbox-border:-5px 0 0 0 rgb(255, 255, 255, 0.7),
+                5px 0 0 0 rgb(255, 255, 255, 0.7),
+                0 -5px 0 0 rgb(255, 255, 255, 0.7),
+                0 5px 0 0 rgb(255, 255, 255, 0.7);
+
+                
 
 
 // #7fa589

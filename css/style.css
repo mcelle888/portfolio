@@ -39,12 +39,12 @@
 }
 
 #portrait-img {
+  border: 5px solid rgb(128, 216, 212);
+  box-shadow: -2px 2px 0 0 rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   padding: 0.5rem;
   width: 14rem;
   height: 14rem;
-  border: 5px solid rgb(128, 216, 212);
-  box-shadow: -2px 2px 0 0 rgba(255, 255, 255, 0.7);
   filter: saturate(20%) hue-rotate(30deg);
   margin-top: 1rem;
 }
@@ -232,9 +232,9 @@ header {
 }
 
 #about {
-  width: 100vw;
-  height: 100vh;
   background-color: rgb(243, 222, 183);
+  height: 100%;
+  width: 100vw;
 }
 
 .heading-title {
@@ -242,13 +242,14 @@ header {
   color: white;
   font-family: "Kode Mono", monospace;
   display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
   gap: 1rem;
   font-size: 2rem;
   padding: 2rem;
-  padding-top: 5rem;
+  padding-top: 8rem;
   position: relative;
 }
 
@@ -258,7 +259,8 @@ header {
   width: 70vw;
   margin: 2em auto;
   padding: 2.5rem;
-  box-shadow: -5px 0 0 0 rgba(255, 255, 255, 0.7), 5px 0 0 0 rgba(255, 255, 255, 0.7), 0 -5px 0 0 rgba(255, 255, 255, 0.7), 0 5px 0 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 5px 0 0 0 rgba(255, 255, 255, 0.7), 0 -5px 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+  border: 5px solid #afb9c8;
 }
 
 #projects {

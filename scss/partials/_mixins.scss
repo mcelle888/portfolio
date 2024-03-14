@@ -15,7 +15,24 @@
   text-align: center;
 }
 
-@mixin round-border {
+@mixin section-container($background-color) {
+  background-color: $background-color;
+  height: 100%;
+  width: 100vw;
+  
+}
+
+@mixin picture-border($color, $box-color) {
+  border: 5px solid $color;
+  box-shadow: -2px 2px 0 0 $box-color;
   border-radius: 50%;
   padding: 0.5rem;  
+}
+
+@mixin textbox-border {
+  box-shadow: 0 0 0 0 rgb(255, 255, 255, 0.7),
+              5px 0 0 0 rgb(255, 255, 255, 0.7),
+              0 -5px 0 0 rgb(255, 255, 255, 0.7),
+              0 0 0 0 rgb(255, 255, 255, 0.7);
+  border: 5px solid v.$main-blue;
 }

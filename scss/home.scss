@@ -4,9 +4,7 @@
 // Home Section
 .home {
   @include m.center-column;
-  background-color: v.$base-pink;
-  height: 100%;
-  width: 100vw;
+  @include m.section-container(v.$base-pink)
 } 
  
 // Header Text 
@@ -35,11 +33,9 @@
 }
 
 #portrait-img {
-  @include m.round-border;
+  @include m.picture-border(rgb(128, 216, 212),rgb(255, 255, 255, 0.7) );
   width: 14rem;
-  height: 14rem;  
-  border: 5px solid rgb(128, 216, 212);
-  box-shadow: -2px 2px 0 0 rgb(255, 255, 255, 0.7);
+  height: 14rem;
   filter: saturate(20%) hue-rotate(30deg);
   margin-top: 1rem;
 
