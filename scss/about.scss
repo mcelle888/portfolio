@@ -5,7 +5,7 @@
 #about {
     @include m.section-container(v.$base-cream);
     @include m.center-column;
-    height: 175%;
+    height: 230%;
 }
 
 .heading-title {
@@ -13,18 +13,22 @@
     gap: 1rem; 
     font-size: 2rem;
     position: relative;
+    margin-bottom: 1rem;
+    &--padding {
+        padding: 2rem;
+    }
 }
 
 .text-box {
     background-color:rgb(175, 185, 200, .8) ;
-    height: 60vh;
+    height: auto;
     width: 90vw;
     margin: 2em auto;
-    padding: 2rem;
-    @include m.textbox-border;
+    padding: 1rem;
     font-family: v.$main-font; 
     font-size: 0.9rem;
-    color: white;
+    color: v.$text-black;
+    @include m.textbox-border;
   }
   
 
@@ -39,6 +43,7 @@
 
 .icon:hover {
     transform: scale(1.5);
+    filter: drop-shadow(0 0 1rem rgba(27, 59, 201, 0.8)) invert(100%);
 }
 
 .skills-container {
@@ -60,6 +65,7 @@
 .education {
     width: 80vw;
     font-family: v.$main-font;
+    color: v.$text-black;
 }
 .edu-container {
     margin: 1rem;
@@ -67,9 +73,29 @@
     @include queries.phone {
         flex-direction: column;
     }
-
 }
 
-.school > p:last-child {
-    text-align: end;
+.uni {
+    height:5rem;
+    width: 6rem;
+    margin-top: 1rem;
 }
+
+.uni-two {
+    height: 3rem;
+    width: 6rem;
+    margin-top: 2rem;
+}
+
+.school {
+    font-size: 0.9rem;
+    background-color: rgb(255, 255, 255, 0.4);
+    padding: 0.8rem;
+    &--align-end {
+        text-align: end;
+    }
+    &--bold {
+        font-weight: bold;
+    }
+}
+
