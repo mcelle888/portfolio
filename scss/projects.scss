@@ -1,8 +1,55 @@
 @use './partials/mixins' as m;
 @use './partials/variables' as v;
+@use './partials/queries';
 
 #projects {
-    width: 100vw;
-    height: 100vh;
-    background-color: v.$base-pink;
+    @include m.center-column;
+    @include m.section-container(v.$base-pink);
+    height: 275%;
+}
+
+.project-container {
+    display: grid;
+    grid-template: 1fr;
+    @include queries.desktop {
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+    }
+}
+
+.project {
+    color: v.$text-black;
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-bottom: 2px solid white;
+}
+
+.project-title {
+    width: fit-content;
+    font-family: v.$main-font;
+    align-self: center;
+}
+
+.repo-link {
+    height: 3rem;
+    width: 3rem;
+    width: fit-content;
+    margin: 0.5rem;
+    filter: invert(100%)
+}
+
+.tech-stack {
+    text-align:end;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
 }
