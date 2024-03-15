@@ -1,26 +1,101 @@
 @use './partials/mixins' as m;
 @use './partials/variables' as v;
+@use './partials/queries';
 
 #about {
-    @include m.section-container(v.$base-cream)
+    @include m.section-container(v.$base-cream);
+    @include m.center-column;
+    height: 230%;
 }
 
 .heading-title {
     @include m.default-heading;
-    @include m.center-column;
     gap: 1rem; 
     font-size: 2rem;
-    padding: 2rem;
-    padding-top: 8rem;
     position: relative;
+    margin-bottom: 1rem;
+    &--padding {
+        padding: 2rem;
+    }
 }
 
 .text-box {
-    background-color:rgb(175, 185, 200, .5) ;
-    height:50vh;
-    width: 70vw;
+    background-color:rgb(175, 185, 200, .8) ;
+    height: auto;
+    width: 90vw;
     margin: 2em auto;
-    padding: 2.5rem;
-    @include m.textbox-border
+    padding: 1rem;
+    font-family: v.$main-font; 
+    font-size: 0.9rem;
+    color: v.$text-black;
+    @include m.textbox-border;
   }
   
+
+.icon {
+    filter: invert(100%);
+    transition: transform .2s;
+    @include queries.phone {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+  }
+
+.icon:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 1rem rgba(27, 59, 201, 0.8)) invert(100%);
+}
+
+.skills-container {
+    justify-self: center;
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    font-family: v.$main-font;
+    color: white;
+    padding: 1rem;
+    background-color:rgb(175, 185, 200, .8);
+    @include m.textbox-border;
+    @include queries.phone {
+        gap: 1rem;
+    }
+  }
+
+.education {
+    width: 80vw;
+    font-family: v.$main-font;
+    color: v.$text-black;
+}
+.edu-container {
+    margin: 1rem;
+    flex-direction: row;
+    @include queries.phone {
+        flex-direction: column;
+    }
+}
+
+.uni {
+    height:5rem;
+    width: 6rem;
+    margin-top: 1rem;
+}
+
+.uni-two {
+    height: 3rem;
+    width: 6rem;
+    margin-top: 2rem;
+}
+
+.school {
+    font-size: 0.9rem;
+    background-color: rgb(255, 255, 255, 0.4);
+    padding: 0.8rem;
+    &--align-end {
+        text-align: end;
+    }
+    &--bold {
+        font-weight: bold;
+    }
+}
+
