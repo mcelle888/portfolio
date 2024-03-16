@@ -11,15 +11,24 @@
 .heading-title {
     @include m.default-heading;
     gap: 1rem; 
-    padding-top: 6rem;
+    padding-top: 2rem;
     font-size: 2rem;
     position: relative;
     margin-bottom: 1rem;
     &--padding {
-        padding: 2rem;
+        padding-top: 5rem;
     }
     &--dark {
         color: v.$text-brown;
+    }
+    @include queries.tablet {
+        padding-top: 0rem;
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    @include queries.desktop {
+        font-size: 2.2rem;
     }
 }
 
@@ -33,15 +42,52 @@
     font-size: 0.9rem;
     color: v.$text-black;
     @include m.textbox-border;
+    @include queries.tablet {
+        width: 60vw;
+        margin-top: 3rem;
+        margin-bottom: 0rem; 
+    }
+    @include queries.desktop {
+        width: 60vw;
+        margin-top: 3rem;
+        margin-bottom: 0rem; 
+    }
   }
-  
+
+
+
+// Skills and Education section 
+
+.skills-edu-container{
+    @include queries.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+    }
+    @include queries.desktop {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+    }
+}
 
 .icon {
     filter: invert(100%);
     transition: transform .2s;
+    @include m.top-layer;
     @include queries.phone {
         height: 2.5rem;
         width: 2.5rem;
+    }
+    @include queries.tablet {
+        height: 1.9rem;
+        width: 1.9rem; 
+    }
+    @include queries.desktop {
+        height: 1.9rem;
+        width: 1.9rem; 
     }
   }
 
@@ -63,6 +109,18 @@
     @include m.textbox-border;
     @include queries.phone {
         gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    @include queries.tablet {
+        margin-top: 2rem; 
+        gap: 1.6rem;
+        height: fit-content;
+    }
+    @include queries.desktop {
+        margin-top: 2rem; 
+        gap: 1rem;
+        height: fit-content;
+        width: 35vw;
     }
   }
 
@@ -70,13 +128,38 @@
     width: 80vw;
     font-family: v.$main-font;
     color: v.$text-black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2rem;
+    @include queries.tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:40vw;
+        margin: 0;
+    }
+    @include queries.desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:40vw;
+        margin: 0;
+    }
 }
+
 .edu-container {
     margin: 1rem;
     flex-direction: row;
     @include queries.phone {
         flex-direction: column;
     }
+    @include queries.tablet {
+        width: 25vw;
+    }
+    @include queries.desktop {
+        width: 25vw;
+    }
+    
 }
 
 .uni {
@@ -93,13 +176,40 @@
 
 .school {
     font-size: 0.9rem;
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(175, 185, 200, .8);
+    @include m.textbox-border;
     padding: 0.8rem;
+    margin-bottom: 1rem;
     &--align-end {
         text-align: end;
     }
     &--bold {
         font-weight: bold;
     }
+}
+
+.computer-img {
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem; 
+}
+
+
+.about-img {
+    display: flex;
+    flex-direction: row;
+    @include queries.phone {
+        display: none;
+    }
+    @include queries.desktop {
+        justify-content: center;
+    }
+}
+
+.line {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.9rem;
 }
 

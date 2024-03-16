@@ -289,16 +289,28 @@ header {
   color: white;
   font-family: "Kode Mono", monospace;
   gap: 1rem;
-  padding-top: 6rem;
+  padding-top: 2rem;
   font-size: 2rem;
   position: relative;
   margin-bottom: 1rem;
 }
 .heading-title--padding {
-  padding: 2rem;
+  padding-top: 5rem;
 }
 .heading-title--dark {
   color: rgba(82, 53, 34, 0.5);
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .heading-title {
+    padding-top: 0rem;
+    margin-top: 2rem;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .heading-title {
+    font-size: 2.2rem;
+  }
 }
 
 .text-box {
@@ -313,15 +325,60 @@ header {
   box-shadow: 0 0 0 0 antiquewhite, 5px 0 0 0 antiquewhite, 0 -5px 0 0 antiquewhite, 0 0 0 0 antiquewhite;
   border: 5px solid #afb9c8;
 }
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .text-box {
+    width: 60vw;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .text-box {
+    width: 60vw;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .skills-edu-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .skills-edu-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+}
 
 .icon {
   filter: invert(100%);
   transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (max-width: 480px) {
   .icon {
     height: 2.5rem;
     width: 2.5rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .icon {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .icon {
+    height: 1.9rem;
+    width: 1.9rem;
   }
 }
 
@@ -346,6 +403,22 @@ header {
 @media only screen and (max-width: 480px) {
   .skills-container {
     gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .skills-container {
+    margin-top: 2rem;
+    gap: 1.6rem;
+    height: fit-content;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .skills-container {
+    margin-top: 2rem;
+    gap: 1rem;
+    height: fit-content;
+    width: 35vw;
   }
 }
 
@@ -353,6 +426,27 @@ header {
   width: 80vw;
   font-family: "Kode Mono", monospace;
   color: rgb(105, 99, 99);
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    margin: 0;
+  }
 }
 
 .edu-container {
@@ -362,6 +456,16 @@ header {
 @media only screen and (max-width: 480px) {
   .edu-container {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .edu-container {
+    width: 25vw;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .edu-container {
+    width: 25vw;
   }
 }
 
@@ -379,14 +483,45 @@ header {
 
 .school {
   font-size: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(175, 185, 200, 0.8);
+  box-shadow: 0 0 0 0 antiquewhite, 5px 0 0 0 antiquewhite, 0 -5px 0 0 antiquewhite, 0 0 0 0 antiquewhite;
+  border: 5px solid #afb9c8;
   padding: 0.8rem;
+  margin-bottom: 1rem;
 }
 .school--align-end {
   text-align: end;
 }
 .school--bold {
   font-weight: bold;
+}
+
+.computer-img {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+}
+
+.about-img {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 480px) {
+  .about-img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .about-img {
+    justify-content: center;
+  }
+}
+
+.line {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.9rem;
 }
 
 #projects {
@@ -398,7 +533,7 @@ header {
   background-color: rgb(230, 188, 177);
   height: 100%;
   width: 100vw;
-  height: 520%;
+  height: auto;
   font-family: "Kode Mono", monospace;
 }
 
@@ -497,7 +632,7 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 140%;
+  height: auto;
   font-family: "Kode Mono", monospace;
 }
 

@@ -5,11 +5,9 @@
 #contact{
     @include m.section-container(v.$base-cream);
     @include m.center-column;
-    height: 140%;
+    height: auto;
     font-family: v.$main-font;
 }
-
-
 
 .send-message {
     padding: 1rem;
