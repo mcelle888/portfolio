@@ -3,6 +3,7 @@
 @use './nav.scss';
 @use './about.scss';
 @use './projects.scss';
+@use './contact.scss';
 @use './partials/mixins' as m;
 @use './partials/variables' as v;
 
@@ -23,6 +24,16 @@ body {
  
 main {
     height: 100vh;
+}
+
+footer {
+    background-color: v.$main-blue;
+    padding: 0.2rem;
+    text-align: center;
+    font-family: v.$main-font;
+    font-size: small;
+    color: white;
+    border-top: 2px solid antiquewhite;
 }
 
 /* BACKGROUND */

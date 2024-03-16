@@ -59,21 +59,3 @@
     content: "-";
   }
 }
-
-// MOVE TO CONTACT PAGE
-// Plays stickman gif once on page load
-.gif {
-    filter: contrast(0%) brightness(0%) 
-    invert(100%);
-    height: 200px;
-    width: 200px;
-    background-image: url(/assets/hello.gif);
-    background-attachment: fixed;
-    background-position: center;
-    animation: play-once 1.5s forwards;  
-}
-
-// Hover to replay gif infintely 
-.gif:hover {
-    animation: play-infinite 1.5s infinite steps(1); 
-}

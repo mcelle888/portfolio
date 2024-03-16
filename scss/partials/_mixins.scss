@@ -30,9 +30,30 @@
 }
 
 @mixin textbox-border {
-  box-shadow: 0 0 0 0 rgb(255, 255, 255, 0.7),
-              5px 0 0 0 rgb(255, 255, 255, 0.7),
-              0 -5px 0 0 rgb(255, 255, 255, 0.7),
-              0 0 0 0 rgb(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 0 antiquewhite,
+              5px 0 0 0 antiquewhite,
+              0 -5px 0 0 antiquewhite,
+              0 0 0 0 antiquewhite;
   border: 5px solid v.$main-blue;
+}
+
+@mixin textbox-border-pink {
+  box-shadow: 0 0 0 0 antiquewhite,
+              5px 0 0 0 antiquewhite,
+              0 -5px 0 0 antiquewhite,
+              0 0 0 0 antiquewhite;
+  border: 5px solid v.$base-pink;
+}
+
+@mixin textbox-border-cream {
+  box-shadow: 0 0 0 0 antiquewhite,
+              5px 0 0 0 antiquewhite,
+              0 -5px 0 0 antiquewhite,
+              0 0 0 0 antiquewhite;
+  border: 5px solid v.$main-cream;
+}
+
+@mixin logo-highlight {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 0.5rem rgba(11, 26, 94, 0.8)) invert(100%);
 }
