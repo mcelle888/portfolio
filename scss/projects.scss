@@ -5,7 +5,8 @@
 #projects {
     @include m.center-column;
     @include m.section-container(v.$base-pink);
-    height: 275%;
+    height: 500%;
+    font-family: v.$main-font;
 }
 
 .project-container {
@@ -16,33 +17,37 @@
         grid-template-rows: 1fr;
         gap: 2rem;
     }
+    
 }
 
 .project {
-    color: v.$text-black;
-    background-color: rgb(255, 255, 255, 0.3);
-    padding: 1rem;
+    background-color: v.$main-blue;
+    padding: 0.5rem;
     margin: 1rem;
+    color: white;
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     border-bottom: 2px solid white;
+    color: white;
 }
 
 .project-title {
     width: fit-content;
-    font-family: v.$main-font;
-    align-self: center;
+    align-self: flex-end;
+    text-wrap: nowrap;
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
 }
 
 .repo-link {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     width: fit-content;
     margin: 0.5rem;
     filter: invert(100%)
@@ -51,5 +56,38 @@
 .tech-stack {
     text-align:end;
     margin-top: 0.5rem;
-    margin-right: 2rem;
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    color: v.$text-black;
+}
+
+
+.project-one {
+    height: 10rem;
+    width: 18rem;
+    margin-top: 0.5rem;
+    opacity: 90%;
+}
+
+.project-description {
+    font-size: 0.8rem;
+    text-align: start;
+    margin-top: 1rem;
+    padding-bottom: 0.4rem;
+}
+
+.feature-list {
+    text-align: start;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+.list-items {
+    list-style-type: circle;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.list-items > li {
+    padding: 0.4rem;
 }
