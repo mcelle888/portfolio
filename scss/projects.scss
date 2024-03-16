@@ -5,7 +5,7 @@
 #projects {
     @include m.center-column;
     @include m.section-container(v.$base-pink);
-    height: 500%;
+    height: 520%;
     font-family: v.$main-font;
 }
 
@@ -35,6 +35,8 @@
     margin-right: 0.5rem;
     border-bottom: 2px solid white;
     color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .project-title {

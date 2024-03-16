@@ -24,7 +24,7 @@
                   <a class="nav-item" href="#">Home</a>
                   <a class="nav-item" href="#about">About</a>
                   <a class="nav-item" href="#projects">Projects</a>
-                  <a class="nav-item" href="#">Contact</a>
+                  <a class="nav-item" href="#contact">Contact</a>
                 </nav>
               </header>
             <div class="header-title">
@@ -42,7 +42,6 @@
                 <img id="portrait-img" src="./assets/coding.gif" alt="coder">
             </div>
             </div>
-            <!-- <div class="gif"></div> -->
         </section>    
 
         <section id="about">
@@ -252,19 +251,63 @@
                         </ul> 
                     </div>
                 </div>
-                
-                
             </article>
         </section>  
+
+        <section id="contact">
+        <h2 class="heading-title">Contact</h2>
+
+        <article class="send-message">
+            <p>Send me a message and I'll get back to you ASAP!</p>
+            <form class="contact-form" action="https://formspree.io/f/xgeglekr" method="POST">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Name" required/>
+                
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+
+                <label for="message">Message:</label>
+                <textarea rows="5" cols= "40"  name="message" id="message" placeholder= "Message"></textarea>
+                <label></label>
+                <input class="submit-button" type="submit" value="Submit &#x2709;" />
+            </form>
+        </article>
+
+        <article class="connect">
+            <p>Connect with me below</p>
+            <div class="socials-container">
+                <div class="socials">
+                    <a class="socials-link" href="mailto: smlxm08@gmail.com">
+                        <img class="socials-logo" src="./assets/icons/email.png" alt="github">
+                    </a>  
+                    <p>smlxm08@gmail.com</p>
+                </div>
+                <div class="socials">
+                    <a class="socials-link" href="www.linkedin.com/in/michelle-l-xm">
+                        <img class="socials-logo" src="./assets/icons/linkedin.png" alt="github">
+                    </a>  
+                    <p>@michelle-l-xm</p>
+                </div>
+                <div class="socials">
+                    <a class="socials-link" href="https://github.com/mcelle888">
+                        <img class="socials-logo" src="./assets/icons/github.png" alt="github">
+                    </a>  
+                    <p>@mcelle888</p>
+                </div>
+            </div>
+        </article>
+        <article class="goodbye">
+            <div class="gif"></div>
+            <p>Thanks for visiting!</p>
+        </article>
+        </section>
         <!-- <div class="bg-animation">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
             <div id="stars4"></div>
         </div> -->
-
- 
+        <footer> &#169; Michelle L 2024</footer>
     </main>
-
 </body>
 </html>
