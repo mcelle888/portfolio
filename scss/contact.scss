@@ -13,8 +13,7 @@
 
 .send-message {
     padding: 1rem;
-    position: relative;
-    z-index: 1;
+    @include m.top-layer;
     background-color: v.$main-pink; 
     margin: 1rem;
     color: v.$text-black;

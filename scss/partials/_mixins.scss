@@ -57,3 +57,8 @@
   transform: scale(1.2);
   filter: drop-shadow(0 0 0.5rem rgba(11, 26, 94, 0.8)) invert(100%);
 }
+
+@mixin top-layer {
+  position: relative;
+  z-index: 1;
+}

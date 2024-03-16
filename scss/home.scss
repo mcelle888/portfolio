@@ -1,10 +1,12 @@
 @use './partials/variables' as v;
 @use './partials/mixins' as m;
+@use './partials/queries';
 
 // Home Section
 .home {
   @include m.center-column;
-  @include m.section-container(v.$base-pink)
+  @include m.section-container(v.$base-pink);
+  height: 100vh;
 } 
  
 // Header Text 
@@ -12,7 +14,17 @@
     @include m.center-column;
     @include m.default-heading;
     gap: 1rem;
+    @include queries.tablet {
+      font-size: 1.8rem;
+      gap: 2rem;
+    }
+    @include queries.desktop {
+      margin-top: 3.5rem; 
+      font-size: 1.6rem;
+      gap: 1rem;
+    }
 }
+
 
 // Align animation on wave
 .wave-box {
@@ -32,19 +44,52 @@
   margin-top: -0.5rem;
 }
 
+// Image
 #portrait-img {
   @include m.picture-border(rgb(128, 216, 212),rgb(255, 255, 255, 0.7) );
   width: 14rem;
   height: 14rem;
   filter: saturate(20%) hue-rotate(30deg);
-  margin-top: 1rem;
+  margin-top: 2rem;
 
+  @include queries.tablet {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 4rem;
+  }
 }
 
+// Waving emoticon container
 .container {
   display: flex;
   height: 2.5rem;
   width: 8rem;
+  @include queries.tablet {
+    width: 11rem;
+  }
+  @include queries.desktop {
+    width: 12rem;
+  }
+}
+
+// Resume 
+.resume-button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: v.$main-blue;
+  border-color: white;
+  @include m.top-layer;
+}
+
+.resume-link {
+  text-decoration: none;
+  font-family: v.$main-font;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.resume-button:hover {
+  filter: v.$button-highlight;
 }
 
 // Animation for wave-box

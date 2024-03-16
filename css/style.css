@@ -8,6 +8,7 @@
   background-color: rgb(230, 188, 177);
   height: 100%;
   width: 100vw;
+  height: 100vh;
 }
 
 .header-title {
@@ -20,6 +21,19 @@
   color: white;
   font-family: "Kode Mono", monospace;
   gap: 1rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .header-title {
+    font-size: 1.8rem;
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .header-title {
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
 }
 
 .wave-box {
@@ -46,13 +60,50 @@
   width: 14rem;
   height: 14rem;
   filter: saturate(20%) hue-rotate(30deg);
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  #portrait-img {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 4rem;
+  }
 }
 
 .container {
   display: flex;
   height: 2.5rem;
   width: 8rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .container {
+    width: 11rem;
+  }
+}
+@media only screen and (min-width: 802px) {
+  .container {
+    width: 12rem;
+  }
+}
+
+.resume-button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: #afb9c8;
+  border-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-link {
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.resume-button:hover {
+  filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.8));
 }
 
 @keyframes change-text {
@@ -115,6 +166,10 @@ header {
   height: 6rem;
   width: 5.5rem;
   margin: -1rem 0rem -1rem 1rem;
+}
+
+#logo:hover {
+  filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.8));
 }
 
 .menu a {
@@ -193,7 +248,7 @@ header {
 }
 
 .menu a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.8));
 }
 
 .menu-button:checked ~ .menu {
@@ -226,7 +281,7 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 230%;
+  height: auto;
 }
 
 .heading-title {
