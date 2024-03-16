@@ -5,7 +5,7 @@
 #projects {
     @include m.center-column;
     @include m.section-container(v.$base-pink);
-    height: 520%;
+    height: auto;
     font-family: v.$main-font;
 }
 
