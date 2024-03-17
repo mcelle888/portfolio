@@ -23,6 +23,11 @@
       font-size: 1.6rem;
       gap: 1rem;
     }
+    @include queries.large-desktop {
+      margin-top: 3.5rem; 
+      font-size: 1.6rem;
+      gap: 1rem;
+    }
 }
 
 
@@ -68,6 +73,9 @@
     width: 11rem;
   }
   @include queries.desktop {
+    width: 12rem;
+  }
+  @include queries.large-desktop {
     width: 12rem;
   }
 }
