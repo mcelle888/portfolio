@@ -326,7 +326,7 @@ header {
 }
 @media only screen and (min-width: 1201px) {
   .heading-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -358,7 +358,8 @@ header {
 }
 @media only screen and (min-width: 1201px) {
   .text-box {
-    width: 60vw;
+    width: 45vw;
+    padding: 1rem;
     margin-top: 3rem;
     margin-bottom: 0rem;
   }
@@ -462,9 +463,9 @@ header {
 @media only screen and (min-width: 1201px) {
   .skills-container {
     margin-top: 2rem;
-    gap: 1rem;
+    gap: 2rem;
     height: fit-content;
-    width: 40vw;
+    width: 35vw;
   }
 }
 
@@ -501,6 +502,7 @@ header {
     align-items: center;
     width: 40vw;
     margin: 0;
+    margin-bottom: 4.75rem;
   }
 }
 
@@ -651,7 +653,7 @@ header {
 @media only screen and (min-width: 802px) and (max-width: 1200px) {
   .project {
     margin: 2.5rem;
-    width: 40vw;
+    width: 42vw;
   }
   .project--margin-bot {
     margin-bottom: 2.5rem;
@@ -659,7 +661,7 @@ header {
 }
 @media only screen and (min-width: 1201px) {
   .project {
-    margin: 2.5rem;
+    margin: 2rem;
     width: 28vw;
   }
   .project--margin-bot {
@@ -689,6 +691,16 @@ header {
 @media only screen and (min-width: 481px) and (max-width: 801px) {
   .project-title {
     font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 802px) and (max-width: 1200px) {
+  .project-title {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .project-title {
+    font-size: 1rem;
   }
 }
 
@@ -730,12 +742,12 @@ header {
   text-align: end;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgb(105, 99, 99);
 }
-@media only screen and (min-width: 481px) and (max-width: 801px) {
+@media only screen and (max-width: 480px) {
   .tech-stack {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -748,37 +760,37 @@ header {
 }
 
 .project-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: start;
   margin-top: 1rem;
   padding-bottom: 0.4rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 801px) {
+@media only screen and (max-width: 480px) {
   .project-description {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 .feature-list {
   text-align: start;
   padding: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 801px) {
+@media only screen and (max-width: 480px) {
   .feature-list {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }
 
 .list-items {
   list-style-type: circle;
-  font-size: 0.7rem;
+  font-size: 0.8;
   margin-top: 0.5rem;
   padding-left: 1rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 801px) {
+@media only screen and (max-width: 480px) {
   .list-items {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -799,6 +811,30 @@ header {
   font-family: "Kode Mono", monospace;
 }
 
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media only screen and (min-width: 802px) and (max-width: 1200px) {
+  .contact-section {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .contact-section {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 3rem;
+  }
+}
+
 .send-message {
   padding: 1rem;
   position: relative;
@@ -809,6 +845,18 @@ header {
   font-size: 0.75rem;
   box-shadow: 0 0 0 0 antiquewhite, 5px 0 0 0 antiquewhite, 0 -5px 0 0 antiquewhite, 0 0 0 0 antiquewhite;
   border: 5px solid rgb(230, 188, 177);
+}
+@media only screen and (min-width: 802px) and (max-width: 1200px) {
+  .send-message {
+    width: 38vw;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .send-message {
+    width: 35vw;
+    height: 20rem;
+    font-size: 1rem;
+  }
 }
 
 .contact-form {
@@ -835,20 +883,45 @@ header {
   padding: 0.5rem;
   background-color: rgba(230, 188, 177, 0.6);
   color: rgb(105, 99, 99);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   box-shadow: 0 0 0 0 antiquewhite, 5px 0 0 0 antiquewhite, 0 -5px 0 0 antiquewhite, 0 0 0 0 antiquewhite;
   border: 5px solid rgb(230, 188, 177);
+}
+@media only screen and (min-width: 481px) and (max-width: 801px) {
+  .connect {
+    width: 55vw;
+  }
+}
+@media only screen and (min-width: 802px) and (max-width: 1200px) {
+  .connect {
+    width: 38vw;
+    height: 14rem;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .connect {
+    width: 35vw;
+    height: 14rem;
+    font-size: 1.2rem;
+  }
 }
 
 .socials-container {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
+@media only screen and (min-width: 1201px) {
+  .socials-container {
+    font-size: 1rem;
+  }
+}
 
 .socials {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin-left: 4rem;
 }
 
 .socials > p {
@@ -867,10 +940,26 @@ header {
   transform: rotate(10deg) scale(1.2);
 }
 
+.goodbye {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .goodbye > p {
-  margin-top: 1rem;
+  margin: 1.5rem;
   color: white;
   font-weight: 500;
+}
+@media only screen and (min-width: 802px) and (max-width: 1200px) {
+  .goodbye > p {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .goodbye > p {
+    font-size: 1.2rem;
+  }
 }
 
 .gif {
@@ -1045,11 +1134,18 @@ main {
 footer {
   background-color: #afb9c8;
   padding: 0.2rem;
-  text-align: center;
+  text-align: end;
   font-family: "Kode Mono", monospace;
   font-size: small;
   color: white;
   border-top: 2px solid antiquewhite;
+  padding-right: 1.2rem;
+}
+@media only screen and (max-width: 480px) {
+  footer {
+    text-align: center;
+    padding: 0;
+  }
 }
 
 /* BACKGROUND */

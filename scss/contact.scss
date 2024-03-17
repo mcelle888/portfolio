@@ -9,6 +9,23 @@
     font-family: v.$main-font;
 }
 
+.contact-section {
+    @include m.center-column;
+    @include queries.desktop {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        gap: 3rem;
+    }
+    @include queries.large-desktop {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        gap: 3rem;
+    }
+}
+
+
 .send-message {
     padding: 1rem;
     @include m.top-layer;
@@ -17,6 +34,13 @@
     color: v.$text-black;
     font-size: 0.75rem;
     @include m.textbox-border-pink;
+    @include queries.desktop {
+        width: 38vw;
+    }@include queries.large-desktop {
+        width: 35vw;
+        height: 20rem;
+        font-size: 1rem;
+    }
 }
 
 .contact-form {
@@ -43,19 +67,36 @@
     padding: 0.5rem;
     background-color: v.$main-pink;
     color: v.$text-black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     @include m.textbox-border-pink;
+    @include queries.tablet {
+        width: 55vw;
+    }
+    @include queries.desktop {
+        width: 38vw;
+        height: 14rem;
+    }
+    @include queries.large-desktop {
+        width: 35vw;
+        height: 14rem;
+        font-size: 1.2rem;
+    }
 }
 
 .socials-container {
     margin-top: 1rem;
     font-size: 0.8rem;
+    @include queries.large-desktop {
+        font-size: 1rem;
+    }
 }
 
 .socials {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-left: 4rem;
 }
 
 .socials > p {
@@ -73,12 +114,22 @@
     transform:rotate(10deg) scale(1.2)
 }
 
+.goodbye {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .goodbye > p {
-    margin-top: 1rem;
+    margin: 1.5rem;
     color: white;
-    // color: v.$text-brown;
     font-weight: 500;
+    @include queries.desktop {
+        font-size: 1.1rem;
+    }
+    @include queries.large-desktop {
+        font-size: 1.2rem;
+    }
 }
  
 // Plays gif once on page load
