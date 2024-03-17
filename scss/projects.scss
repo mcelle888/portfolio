@@ -49,12 +49,12 @@
     }
     @include queries.desktop {
         margin: 2.5rem;
-        width: 40vw;
+        width: 42vw;
         &--margin-bot{
             margin-bottom: 2.5rem;
         }
     }@include queries.large-desktop {
-        margin: 2.5rem;
+        margin: 2rem;
         width: 28vw;
         &--margin-bot{
             margin-bottom: 2.5rem;
@@ -83,6 +83,13 @@
     @include queries.tablet {
         font-size: 1.2rem;
     }
+    @include queries.desktop {
+        font-size: 1rem;
+    }
+    @include queries.large-desktop {
+        font-size: 1rem;
+    }
+    
 }
 
 .repo-link {
@@ -119,13 +126,12 @@
     text-align:end;
     margin-top: 0.5rem;
     margin-right: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: v.$text-black;
-    @include queries.tablet {
-        font-size: 1rem;
+    @include queries.phone {
+        font-size: 0.75rem;
     }
 }
-
 
 .project-one {
     height: 10rem;
@@ -136,30 +142,30 @@
 }
 
 .project-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: start;
     margin-top: 1rem;
     padding-bottom: 0.4rem;
-    @include queries.tablet {
-        font-size: 1rem;
+    @include queries.phone {
+        font-size: 0.8rem;
     }
 }
 
 .feature-list {
     text-align: start;
     padding: 0.5rem;
-    font-size: 0.85rem;
-    @include queries.tablet {
-        font-size: 1rem;
+    font-size: 1rem;
+    @include queries.phone {
+        font-size: 0.85rem;
     }
 }
 .list-items {
     list-style-type: circle;
-    font-size: 0.7rem;
+    font-size: 0.8;
     margin-top: 0.5rem;
     padding-left: 1rem;
-    @include queries.tablet {
-        font-size: 0.8rem;
+    @include queries.phone {
+        font-size: 0.7rem;
     }
 }
 
