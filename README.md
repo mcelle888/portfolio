@@ -8,7 +8,7 @@
 
 
 ## Introduction
-Welcome to my portfolio repository! This project serves as a platform for me to showcase my experience, knowledge and skills aswell as document my progress and journey to becoming an great web developer. 
+Welcome to my portfolio repository! This project serves as a platform for me to showcase my experience, knowledge and skills aswell as document my progress and journey to becoming a great web developer. 
 
 
 ## Tech Stack
