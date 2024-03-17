@@ -52,6 +52,12 @@
     align-items: center;
 }
 
+.submit-button {
+    width: fit-content;
+    justify-self: center;
+    margin-right: 2rem;
+}
+
 .contact-form > input, textarea{
     padding: 0.2rem;
     font-family: v.$main-font;
@@ -131,6 +137,8 @@
         font-size: 1.2rem;
     }
 }
+
+
  
 // Plays gif once on page load
 .gif {

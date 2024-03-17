@@ -54,15 +54,16 @@
         width: 60vw;
         margin-top: 3rem;
         margin-bottom: 0rem; 
+        font-size: 1.2rem;
     }
     @include queries.large-desktop {
         width: 45vw;
         padding: 1rem;
         margin-top: 3rem;
         margin-bottom: 0rem; 
+        font-size: 1.1rem;
     }
   }
-
 
 
 // Skills and Education section 
@@ -74,6 +75,7 @@
         justify-items: center;
         align-items: center;
     }
+
     @include queries.desktop {
         display: flex;
         flex-direction: row;
