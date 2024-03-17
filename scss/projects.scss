@@ -12,11 +12,22 @@
 .project-container {
     display: grid;
     grid-template: 1fr;
-    @include queries.desktop {
-        grid-template-columns: auto auto;
+    @include queries.tablet {
+        grid-template-columns: auto;
         grid-template-rows: 1fr;
         gap: 2rem;
     }
+    @include queries.desktop {
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        gap: 0;
+    }
+    @include queries.large-desktop {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr;
+        gap: 0;
+    }
+    
     
 }
 
@@ -24,7 +35,31 @@
     background-color: v.$main-blue;
     padding: 0.5rem;
     margin: 1rem;
-    color: white;
+    color: white; 
+    width: 90vw;
+    &--margin-bot{
+        margin-bottom: 5rem;
+    }
+    @include m.textbox-border;
+    @include queries.tablet {
+        margin: 1.5rem 2rem 1.5rem 2rem;
+        &--margin-bot{
+            margin-bottom: 6rem;
+        }
+    }
+    @include queries.desktop {
+        margin: 2.5rem;
+        width: 40vw;
+        &--margin-bot{
+            margin-bottom: 2.5rem;
+        }
+    }@include queries.large-desktop {
+        margin: 2.5rem;
+        width: 28vw;
+        &--margin-bot{
+            margin-bottom: 2.5rem;
+        }
+    }
 }
 
 .project-header {
@@ -45,14 +80,39 @@
     text-wrap: nowrap;
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
+    @include queries.tablet {
+        font-size: 1.2rem;
+    }
 }
 
 .repo-link {
     height: 2.5rem;
     width: 2.5rem;
     width: fit-content;
-    margin: 0.5rem;
+    // margin-right: 1rem;
+    @include queries.tablet {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    @include queries.desktop {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    @include queries.large-desktop {
+        height: 4rem;
+        width: 4rem;
+    }
+
+
+}
+
+.git-link {
     filter: invert(100%)
+}
+
+.git-link:hover {
+    @include m.logo-highlight;
+    transform:rotate(10deg) scale(1.2)
 }
 
 .tech-stack {
@@ -61,6 +121,9 @@
     margin-right: 0.5rem;
     font-size: 0.75rem;
     color: v.$text-black;
+    @include queries.tablet {
+        font-size: 1rem;
+    }
 }
 
 
@@ -69,6 +132,7 @@
     width: 18rem;
     margin-top: 0.5rem;
     opacity: 90%;
+    border-radius: 5px;
 }
 
 .project-description {
@@ -76,18 +140,27 @@
     text-align: start;
     margin-top: 1rem;
     padding-bottom: 0.4rem;
+    @include queries.tablet {
+        font-size: 1rem;
+    }
 }
 
 .feature-list {
     text-align: start;
     padding: 0.5rem;
     font-size: 0.85rem;
+    @include queries.tablet {
+        font-size: 1rem;
+    }
 }
 .list-items {
     list-style-type: circle;
     font-size: 0.7rem;
     margin-top: 0.5rem;
     padding-left: 1rem;
+    @include queries.tablet {
+        font-size: 0.8rem;
+    }
 }
 
 .list-items > li {

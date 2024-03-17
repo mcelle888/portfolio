@@ -30,6 +30,9 @@
     @include queries.desktop {
         font-size: 2.2rem;
     }
+    @include queries.large-desktop {
+        font-size: 2.2rem;
+    }
 }
 
 .text-box {
@@ -48,6 +51,11 @@
         margin-bottom: 0rem; 
     }
     @include queries.desktop {
+        width: 60vw;
+        margin-top: 3rem;
+        margin-bottom: 0rem; 
+    }
+    @include queries.large-desktop {
         width: 60vw;
         margin-top: 3rem;
         margin-bottom: 0rem; 
@@ -71,6 +79,12 @@
         justify-items: center;
         align-items: center;
     }
+    @include queries.large-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+    }
 }
 
 .icon {
@@ -86,6 +100,10 @@
         width: 1.9rem; 
     }
     @include queries.desktop {
+        height: 1.9rem;
+        width: 1.9rem; 
+    }
+    @include queries.large-desktop {
         height: 1.9rem;
         width: 1.9rem; 
     }
@@ -120,8 +138,15 @@
         margin-top: 2rem; 
         gap: 1rem;
         height: fit-content;
-        width: 35vw;
+        width: 40vw;
     }
+    @include queries.large-desktop {
+        margin-top: 2rem; 
+        gap: 1rem;
+        height: fit-content;
+        width: 40vw;
+    }
+    
   }
 
 .education {
@@ -145,6 +170,13 @@
         width:40vw;
         margin: 0;
     }
+    @include queries.large-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:40vw;
+        margin: 0;
+    }
 }
 
 .edu-container {
@@ -157,6 +189,9 @@
         width: 25vw;
     }
     @include queries.desktop {
+        width: 25vw;
+    }
+    @include queries.large-desktop {
         width: 25vw;
     }
     
@@ -202,6 +237,9 @@
         display: none;
     }
     @include queries.desktop {
+        justify-content: center;
+    }
+    @include queries.large-desktop {
         justify-content: center;
     }
 }
