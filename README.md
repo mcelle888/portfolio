@@ -2,24 +2,13 @@
 
 ## Links
 
-[Live Site](link)
+[Live Site](https://portfolio-mcelle888s-projects.vercel.app/)
 
-[Trello Board](link)
-
-
-## Introduction & Features
-Welcome to my portfolio repository! This project serves as a platform for me to showcase my experience, knowledge and skills aswell as demonstrate my progress through my learning experiences as a junior software engineer. 
-
-The website is designed to be fully responsive on mobile, tablet and desktop viewports.
+[Trello Board](https://trello.com/b/2ao6oFVI/portfoliov2)
 
 
-Progress since my very first porfolio site [here](link)
-## Planning and Development
-
-Wireframes: Figma
-
-Task Management: Trello Board
-
+## Introduction
+Welcome to my portfolio repository! This project serves as a platform for me to showcase my experience, knowledge and skills aswell as demonstrate my progress as a junior software engineer. 
 
 
 ## Tech Stack
