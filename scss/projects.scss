@@ -60,6 +60,10 @@
     }
 }
 
+.feature-list, .project > p {
+    @include m.top-layer;
+}
+
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -68,8 +72,7 @@
     margin-right: 0.5rem;
     border-bottom: 2px solid white;
     color: white;
-    position: relative;
-    z-index: 1;
+    @include m.top-layer;
 }
 
 .project-title {
@@ -87,7 +90,6 @@
     @include queries.large-desktop {
         font-size: 1rem;
     }
-    
 }
 
 .repo-link {

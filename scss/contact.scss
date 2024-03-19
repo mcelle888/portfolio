@@ -28,7 +28,6 @@
 
 .send-message {
     padding: 1rem;
-    @include m.top-layer;
     background-color: v.$main-pink; 
     margin: 1rem;
     color: v.$text-black;
@@ -41,6 +40,10 @@
         height: 20rem;
         font-size: 1rem;
     }
+}
+
+.send-message > p, input, textarea, label {
+    @include m.top-layer;
 }
 
 .contact-form {
@@ -67,8 +70,6 @@
     margin-top: 2rem;
     margin: 1rem;
     font-size: 0.9rem;
-    position: relative;
-    z-index: 1;
     width: 91vw;
     padding: 0.5rem;
     background-color: v.$main-pink;
@@ -107,12 +108,14 @@
 
 .socials > p {
     align-self: center;
+    @include m.top-layer;
 }
 
 .socials-logo {
     height: 3rem;
     width: 3rem;
     filter: invert(100%);
+    @include m.top-layer;
 }
 
 .socials-logo:hover {

@@ -101,8 +101,12 @@
   font-size: 1.1rem;
 }
 
+.resume-link:hover {
+  filter: v.$button-highlight-bold;
+}
+
 .resume-button:hover {
-  filter: v.$button-highlight;
+  filter: v.$button-highlight-bold;
 }
 
 // Animation for wave-box

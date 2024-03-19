@@ -120,8 +120,12 @@
   font-size: 1.1rem;
 }
 
+.resume-link:hover {
+  filter: drop-shadow(0 0 0.4rem rgb(255, 255, 255));
+}
+
 .resume-button:hover {
-  filter: drop-shadow(0 0 0.1rem rgb(255, 255, 255));
+  filter: drop-shadow(0 0 0.4rem rgb(255, 255, 255));
 }
 
 @keyframes change-text {
@@ -677,6 +681,11 @@ header {
   }
 }
 
+.feature-list, .project > p {
+  position: relative;
+  z-index: 1;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -845,8 +854,6 @@ header {
 
 .send-message {
   padding: 1rem;
-  position: relative;
-  z-index: 1;
   background-color: rgba(230, 188, 177, 0.6);
   margin: 1rem;
   color: rgb(105, 99, 99);
@@ -865,6 +872,11 @@ header {
     height: 20rem;
     font-size: 1rem;
   }
+}
+
+.send-message > p, input, textarea, label {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-form {
@@ -891,8 +903,6 @@ header {
   margin-top: 2rem;
   margin: 1rem;
   font-size: 0.9rem;
-  position: relative;
-  z-index: 1;
   width: 91vw;
   padding: 0.5rem;
   background-color: rgba(230, 188, 177, 0.6);
@@ -940,12 +950,16 @@ header {
 
 .socials > p {
   align-self: center;
+  position: relative;
+  z-index: 1;
 }
 
 .socials-logo {
   height: 3rem;
   width: 3rem;
   filter: invert(100%);
+  position: relative;
+  z-index: 1;
 }
 
 .socials-logo:hover {
