@@ -8,7 +8,7 @@
   background-color: rgb(230, 188, 177);
   height: 100%;
   width: 100vw;
-  height: 100%;
+  height: auto;
 }
 
 .home-container {
@@ -108,6 +108,7 @@
   padding: 0.5rem;
   background-color: rgb(175, 185, 200);
   border-color: white;
+  margin-bottom: 4rem;
   position: relative;
   z-index: 1;
 }

@@ -6,7 +6,8 @@
 .home {
   @include m.center-column;
   @include m.section-container(v.$base-pink);
-  height: 100%;
+  height: auto;
+
 } 
 
 .home-container {
@@ -93,6 +94,7 @@
   padding: 0.5rem;
   background-color: v.$main-blue;
   border-color: white;
+  margin-bottom: 4rem;
   @include m.top-layer;
 
   @include queries.phone {
