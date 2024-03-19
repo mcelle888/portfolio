@@ -8,7 +8,12 @@
   background-color: rgb(230, 188, 177);
   height: 100%;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+}
+
+.home-container {
+  height: 100%;
+  margin-top: 10rem;
 }
 
 .header-title {
@@ -21,7 +26,6 @@
   color: white;
   font-family: "Kode Mono", monospace;
   gap: 1rem;
-  margin-top: 2rem;
 }
 @media only screen and (min-width: 481px) and (max-width: 801px) {
   .header-title {
