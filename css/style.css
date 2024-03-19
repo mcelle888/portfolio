@@ -616,6 +616,24 @@ header {
   font-family: "Kode Mono", monospace;
 }
 
+.key {
+  color: rgb(105, 99, 99);
+}
+
+.github-link {
+  height: 4rem;
+  width: 4rem;
+  filter: invert(100%);
+  position: relative;
+  z-index: 1;
+}
+
+.github-link:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 0.5rem rgba(11, 26, 94, 0.8)) invert(100%);
+  transform: rotate(10deg) scale(1.2);
+}
+
 .project-container {
   display: grid;
   grid-template: 1fr;

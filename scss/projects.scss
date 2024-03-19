@@ -9,6 +9,22 @@
     font-family: v.$main-font;
 }
 
+.key {
+    color: v.$text-black;
+}
+
+.github-link {
+    height: 4rem;
+    width: 4rem;
+    filter: invert(100%);
+    @include m.top-layer;
+}
+
+.github-link:hover {
+    @include m.logo-highlight;
+    transform:rotate(10deg) scale(1.2)
+}
+
 .project-container {
     display: grid;
     grid-template: 1fr;
