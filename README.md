@@ -8,7 +8,7 @@ Welcome to my portfolio repository! This project serves as a platform for me to 
 [Link to Trello Board](https://trello.com/b/2ao6oFVI/portfoliov2)
 
 
-![Screenshot](assets\portfolio.png)
+![Screenshot](/assets/portfolio.png)
 
 
 ## Tech Stack
